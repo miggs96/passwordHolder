@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:passwordHolder"
+             x:Class="passwordHolder.MainPage" Title="PasswordHolder">
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="10">
+                
+                <ListView HorizontalOptions="FillAndExpand" VerticalOptions="Start" x:Name="passwordContent" IsPullToRefreshEnabled="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.ContextActions>
+                                    <MenuItem Clicked="ItemEdit" Text="Edit"/>
+                                    <MenuItem Clicked="ItemDelete" Text="Delete"/>
+                                </ViewCell.ContextActions>
+                                <Label Text="{Binding Naam}"/>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <Button Text="New" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Clicked="NewPassword"/>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

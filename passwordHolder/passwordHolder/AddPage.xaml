@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="passwordHolder.AddPage" Title="PasswordHolder">
+    
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="Name your password"></Label>
+            <Editor WidthRequest="150" x:Name="FilledInName"/>
+
+            <Label Text="Fill in your password"></Label>
+            <Editor WidthRequest="150" x:Name="FilledInPassword"/>
+
+            <Button Text="Add" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Clicked="AddPassword"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
